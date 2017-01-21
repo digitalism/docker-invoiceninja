@@ -27,7 +27,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 #####
 # DOWNLOAD AND INSTALL INVOICE NINJA
 #####
-ENV INVOICENINJA_VERSION 2.8.1
+ENV INVOICENINJA_VERSION 2.9.5
 
 RUN curl -SL https://github.com/hillelcoren/invoice-ninja/archive/v${INVOICENINJA_VERSION}.tar.gz \
     | tar -xz  -C /var/www/ \
