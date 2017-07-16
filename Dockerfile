@@ -27,7 +27,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- \
 #####
 # DOWNLOAD AND INSTALL INVOICE NINJA
 #####
-ENV INVOICENINJA_VERSION 2.9.5
+ENV INVOICENINJA_VERSION 3.4.2
 
 RUN curl -SL https://github.com/hillelcoren/invoice-ninja/archive/v${INVOICENINJA_VERSION}.tar.gz \
     | tar -xz  -C /var/www/ \
@@ -47,6 +47,7 @@ ENV DB_DATABASE ninja
 ENV APP_KEY SomeRandomStringSomeRandomString
 ENV LOG errorlog
 ENV APP_DEBUG 0
+ENV APP_CIPHER AES-256-CBC
 
 # forward request and error logs to docker log collector
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
